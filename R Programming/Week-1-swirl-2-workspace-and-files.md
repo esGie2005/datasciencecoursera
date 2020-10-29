@@ -1,12 +1,6 @@
 In order to determine the current working directory of R, we use the
 **getwd()** function.
 
-``` r
-getwd()
-```
-
-    ## [1] "C:/Users/Kyle/Personal/OneDrive - carc.pshs.edu.ph/Coursera/Coursera - Data Science (Johns Hopkins)/datasciencecoursera/R Programming"
-
 List all objects in the local workspace using **ls()**
 
 ``` r
@@ -32,18 +26,19 @@ dir()**
 list.files()
 ```
 
-    ##  [1] "hw1_data.csv"                          
-    ##  [2] "testdir"                               
-    ##  [3] "Week-1-data-types.Rmd"                 
-    ##  [4] "Week-1-data.R"                         
-    ##  [5] "Week-1-quiz.html"                      
-    ##  [6] "Week-1-quiz.Rmd"                       
-    ##  [7] "Week-1-reading-writing-data.html"      
-    ##  [8] "Week-1-reading-writing-data.Rmd"       
-    ##  [9] "Week-1-subsetting.html"                
-    ## [10] "Week-1-subsetting.Rmd"                 
-    ## [11] "Week-1-swirl-2-workspace-and-files.Rmd"
-    ## [12] "Week-1-y.R"
+    ##  [1] "hw1_data.csv"                           
+    ##  [2] "Week-1-data-types.Rmd"                  
+    ##  [3] "Week-1-data.R"                          
+    ##  [4] "Week-1-quiz.html"                       
+    ##  [5] "Week-1-quiz.Rmd"                        
+    ##  [6] "Week-1-reading-writing-data.html"       
+    ##  [7] "Week-1-reading-writing-data.Rmd"        
+    ##  [8] "Week-1-subsetting.html"                 
+    ##  [9] "Week-1-subsetting.Rmd"                  
+    ## [10] "Week-1-swirl-2-workspace-and-files.html"
+    ## [11] "Week-1-swirl-2-workspace-and-files.md"  
+    ## [12] "Week-1-swirl-2-workspace-and-files.Rmd" 
+    ## [13] "Week-1-y.R"
 
 using the **args() function** can see what arguments a function can take
 
@@ -62,11 +57,6 @@ directory and set working directory to the new one
 ``` r
 old.dir <- getwd()    # saves the old directory
 dir.create("testdir") # makes a new directory
-```
-
-    ## Warning in dir.create("testdir"): 'testdir' already exists
-
-``` r
 setwd("testdir")      # sets the new directory
 ```
 
@@ -83,19 +73,21 @@ file.create("mytest.R")
 list.files()
 ```
 
-    ##  [1] "hw1_data.csv"                          
-    ##  [2] "mytest.R"                              
-    ##  [3] "testdir"                               
-    ##  [4] "Week-1-data-types.Rmd"                 
-    ##  [5] "Week-1-data.R"                         
-    ##  [6] "Week-1-quiz.html"                      
-    ##  [7] "Week-1-quiz.Rmd"                       
-    ##  [8] "Week-1-reading-writing-data.html"      
-    ##  [9] "Week-1-reading-writing-data.Rmd"       
-    ## [10] "Week-1-subsetting.html"                
-    ## [11] "Week-1-subsetting.Rmd"                 
-    ## [12] "Week-1-swirl-2-workspace-and-files.Rmd"
-    ## [13] "Week-1-y.R"
+    ##  [1] "hw1_data.csv"                           
+    ##  [2] "mytest.R"                               
+    ##  [3] "testdir"                                
+    ##  [4] "Week-1-data-types.Rmd"                  
+    ##  [5] "Week-1-data.R"                          
+    ##  [6] "Week-1-quiz.html"                       
+    ##  [7] "Week-1-quiz.Rmd"                        
+    ##  [8] "Week-1-reading-writing-data.html"       
+    ##  [9] "Week-1-reading-writing-data.Rmd"        
+    ## [10] "Week-1-subsetting.html"                 
+    ## [11] "Week-1-subsetting.Rmd"                  
+    ## [12] "Week-1-swirl-2-workspace-and-files.html"
+    ## [13] "Week-1-swirl-2-workspace-and-files.md"  
+    ## [14] "Week-1-swirl-2-workspace-and-files.Rmd" 
+    ## [15] "Week-1-y.R"
 
 check if “mytest.R” exists in the working directory by using the
 **file.exists()** function and access information about the file using
@@ -112,9 +104,9 @@ file.info("mytest.R")   # accesses info about the said file
 ```
 
     ##          size isdir mode               mtime               ctime
-    ## mytest.R    0 FALSE  666 2020-10-29 13:41:56 2020-10-29 13:41:56
+    ## mytest.R    0 FALSE  666 2020-10-29 13:45:53 2020-10-29 13:45:53
     ##                        atime exe
-    ## mytest.R 2020-10-29 13:41:56  no
+    ## mytest.R 2020-10-29 13:45:53  no
 
 rename the file by using the function, **file.rename** and make a copy
 of the file using the function, **file.copy()**
